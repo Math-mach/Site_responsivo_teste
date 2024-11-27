@@ -3,3 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    align-items: center;
+
+    border: 1px solid #000;
+}
+
+nav > h2{
+    font-size: 2.5rem;
+}
+
+nav > ul{
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+nav li:first-child{
+    color: blue;
+}
+
+nav > ul > li:hover{
+    color: blue;
+    transform: scale(1.2);
+}
