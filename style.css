@@ -12,10 +12,9 @@ li {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px;
   align-items: center;
-
   border: 1px solid #000;
 }
 
@@ -45,14 +44,11 @@ nav > ul > li:hover {
   background-image: url(https://images.unsplash.com/photo-1655476284454-ca64e462532d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODV8fG1vbnRhbmhhcyUyMGRlJTIwbmV2ZXxlbnwwfDB8MHx8fDI%3D);
   background-size: cover;
   background-position: center;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   gap: 1rem;
-
   border: 1px solid #000;
 }
 
@@ -65,7 +61,6 @@ nav > ul > li:hover {
   color: white;
   border: none;
   padding: 10px 20px;
-
   cursor: pointer;
 }
 
@@ -81,26 +76,18 @@ nav > ul > li:hover {
 
 #list_of_features ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #list_of_features li {
-  flex: 1 1;
+  flex: 1 1 30%;
   display: flex;
   align-items: center;
   flex-direction: column;
-
   border: 1px solid #000;
   padding: 15px;
-
   gap: 2rem;
-}
-
-#list_of_features li:first-child {
-  justify-content: end;
-}
-
-#list_of_features li:last-child {
-  justify-content: start;
 }
 
 #list_of_features img {
@@ -127,4 +114,70 @@ nav > ul > li:hover {
   align-items: center;
   margin: 15px 150px;
   gap: 2rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  nav > h2 {
+    font-size: 2rem;
+  }
+
+  nav > ul {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  #image_with_text > p {
+    font-size: 2rem;
+  }
+
+  #image_with_text {
+    height: 350px;
+  }
+
+  #list_of_features ul {
+    flex-direction: column;
+  }
+
+  #list_of_features li {
+    flex: 1 1 100%;
+  }
+
+  #featured_content {
+    margin: 15px 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  nav > h2 {
+    font-size: 1.5rem;
+  }
+
+  nav > ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  #image_with_text > p {
+    font-size: 1.5rem;
+  }
+
+  #list_of_features ul {
+    flex-direction: column;
+  }
+
+  #list_of_features li {
+    padding: 10px;
+  }
+
+  iframe {
+    height: 250px;
+  }
 }
